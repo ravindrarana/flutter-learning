@@ -1,40 +1,22 @@
 import 'package:flutter/material.dart';
+import 'category_route.dart';
 
-class HelloWorld extends StatelessWidget{
+// pass information into your custom [Category]
+
+// const _categoryName = 'Cake';
+// const _categoryIcon = Icons.cake;
+// const _categoryColor = Colors.green;
+
+class UnitConverterApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Center(
-      child: Container(
-      color: Colors.pinkAccent,
-      height: 400.0,
-      width:300,
-      child: Center(
-        child: Text(
-          'Hello world',
-          style: TextStyle(
-            fontSize: 30,
-            fontStyle: FontStyle.italic,
-            ),
-          ),
-      ),
-        
-    ),
-
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Unit Converter',
+      home: CategoryRoute(),
     );
-    
   }
 }
 void main(){
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello World'),
-        ),
-        body: HelloWorld(),
-      ),
-    ),
-    
-    );
+  runApp(UnitConverterApp());
 }
